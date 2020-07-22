@@ -1,0 +1,298 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+$secondary: #f3f0fc;
+$secondary-500: #d0bda5;
+
+$xl: 1500px;
+$lg: 1200px;
+$md: 992px;
+
+body {
+	color: #1a1818;
+	font-family: "Fira Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Nunito", sans-serif;
+}
+
+#top-bar {
+	height: 50px;
+	background: $secondary;
+	display: flex;
+	overflow: hidden;
+	font-size: 13px;
+
+	.container {
+		display: flex;
+	}
+
+	.contact-info {
+		display: flex;
+		flex: 3;
+		@media (max-width: $xl) {
+			flex: initial;
+		}
+		@media (max-width: $md) {
+			flex: 1;
+			justify-content: center;
+		}
+
+		.contact-item {
+			display: flex;
+			align-items: center;
+			padding-left: 1em;
+			padding-right: 1em;
+			.fa {
+				margin-right: 0.5em;
+			}
+			a {
+				color: #1a1818;
+			}
+			&.phone,
+			&.email {
+				@media (max-width: $md) {
+					display: none;
+				}
+			}
+		}
+
+		input {
+			border: none;
+			background-color: transparent;
+			outline: none;
+			padding: 0.25em 0.5em;
+		}
+	}
+
+	.order-info {
+		display: flex;
+		flex: 1;
+		align-items: center;
+		padding-left: 1em;
+		padding-right: 1em;
+		text-transform: uppercase;
+
+		@media (max-width: $xl) {
+			flex: initial;
+		}
+
+		@media (max-width: $lg) {
+			display: none !important;
+		}
+
+		@media (max-width: $md) {
+			display: none !important;
+		}
+
+		.fa {
+			margin-right: 0.5em;
+		}
+	}
+
+	.login-register-mobile {
+		display: none;
+		align-items: center;
+		padding-left: 1em;
+		padding-right: 1em;
+		text-transform: uppercase;
+
+		@media (max-width: $md) {
+			display: flex;
+		}
+
+		.fa {
+			margin-right: 0.5em;
+		}
+	}
+
+	.login-register {
+		display: flex;
+		align-items: center;
+		padding-left: 1em;
+		padding-right: 1em;
+		text-transform: uppercase;
+
+		@media (max-width: $xl) {
+			flex: 1;
+			justify-content: flex-end;
+		}
+
+		@media (max-width: $md) {
+			display: none !important;
+		}
+
+		.fa {
+			margin-left: 0.5em;
+		}
+	}
+
+	.mobile-menu {
+		display: flex;
+		align-items: center;
+		padding-left: 1em;
+		padding-right: 1em;
+		text-transform: uppercase;
+		display: none;
+		justify-content: flex-end;
+
+		.fa {
+			margin-left: 0.5em;
+		}
+
+		@media (max-width: $md) {
+			display: flex;
+		}
+	}
+
+	.top-social-icons {
+		display: flex;
+		align-items: center;
+		@media (max-width: $md) {
+			display: none !important;
+		}
+		.social-menu {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				display: inline-block;
+				a {
+					color: #fff;
+					text-decoration: none;
+					display: block;
+					background: #1a1818;
+					text-align: center;
+					padding: 0.25em 0.5em;
+					width: 30px;
+					height: 30px;
+					line-height: 24px;
+				}
+			}
+		}
+	}
+}
+
+#wrapper-navbar {
+	#main-nav {
+		height: 80px;
+		.navbar-brand {
+			color: #194675;
+			font-size: 26px;
+			line-height: 35px;
+			text-transform: uppercase;
+			font-family: "Nunito", sans-serif;
+			font-weight: 700;
+		}
+		.site-description {
+			margin-left: 50px;
+			@media (max-width: $md) {
+				display: none;
+			}
+		}
+
+		#navbarNavDropdown {
+			#main-menu {
+				li {
+					a {
+						font-size: 16px;
+						line-height: 19px;
+						position: relative;
+					}
+				}
+				.active {
+					.nav-link {
+						color: #e920af;
+						font-weight: bold;
+						&:after {
+							content: "";
+							background: #e920af;
+							width: 100%;
+							height: 3px;
+							position: absolute;
+							left: 0;
+							bottom: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.home-banner {
+	padding: 72px 0;
+	height: 637px;
+	background: #c2c1c2;
+	background: url(../img/background.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+
+	.banner-title {
+		font-size: 48px;
+		line-height: 48px;
+		font-weight: bold;
+		font-style: italic;
+		font-family: "Crimson Text", serif;
+		margin-bottom: 44px;
+	}
+
+	p {
+		// font-family: Roboto, sans-serif;
+		width: 503px;
+		font-size: 23px;
+		line-height: 37px;
+		@media (max-width: $md) {
+			width: auto;
+			font-size: 16px;
+		}
+	}
+}
+
+.calolike {
+	padding: 84px 0;
+	.icon-holder {
+		margin-bottom: 21px;
+		.fa {
+			font-size: 78px;
+		}
+	}
+}
+
+.recent-posts {
+	padding: 87px 0;
+	background: $secondary;
+	.section-title {
+		color: #303030;
+		font-size: 36px;
+		line-height: 49px;
+		font-weight: 400;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		margin-bottom: 67px;
+	}
+	.post {
+		margin-bottom: 51px;
+		.entry-title {
+			font-size: 30px;
+			line-height: 37px;
+			font-weight: bold;
+			margin-bottom: 30px;
+			a {
+				color: #303030;
+			}
+		}
+		.entry-meta {
+			font-size: 15px;
+			font-weight: bold;
+			line-height: 20px;
+			margin-bottom: 30px;
+			a {
+				color: #5b5b5b;
+			}
+		}
+	}
+}
