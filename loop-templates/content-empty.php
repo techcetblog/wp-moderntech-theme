@@ -2,7 +2,7 @@
 /**
  * Content empty partial template
  *
- * @package UnderStrap
+ * @package ModernTech
  */
 
 // Exit if accessed directly.

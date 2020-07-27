@@ -2,7 +2,7 @@
 /**
  * Hero setup
  *
- * @package UnderStrap
+ * @package ModernTech
  */
 
 // Exit if accessed directly.

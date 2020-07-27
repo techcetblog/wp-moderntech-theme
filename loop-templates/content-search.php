@@ -2,7 +2,7 @@
 /**
  * Search results partial template
  *
- * @package UnderStrap
+ * @package ModernTech
  */
 
 // Exit if accessed directly.
@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<div class="entry-meta">
 
-				<?php understrap_posted_on(); ?>
+				<?php moderntech_posted_on(); ?>
 
 			</div><!-- .entry-meta -->
 
@@ -40,7 +40,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<footer class="entry-footer">
 
-		<?php understrap_entry_footer(); ?>
+		<?php moderntech_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 

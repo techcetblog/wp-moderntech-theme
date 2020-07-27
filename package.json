@@ -1,5 +1,5 @@
 {
-  "name": "understrap",
+  "name": "moderntechblog",
   "version": "0.9.4",
   "description": "WordPress Theme framework",
   "main": "index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/understrap/understrap.git"
+    "url": "https://github.com/techcetblog/wp-moderntech-theme"
   },
   "keywords": [
     "wordpress",
@@ -21,12 +21,12 @@
     "bootstrap",
     "underscores"
   ],
-  "author": "The UnderStrap Authors (https://github.com/understrap/understrap/graphs/contributors)",
+  "author": "The ModernTech Authors (https://github.com/techcetblog/wp-moderntech-theme/graphs/contributors)",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/understrap/understrap/issues"
+    "url": "https://github.com/techcetblog/wp-moderntech-theme/issues"
   },
-  "homepage": "https://understrap.com",
+  "homepage": "https://techcetblog.com",
   "dependencies": {
     "g": "^2.0.1"
   },

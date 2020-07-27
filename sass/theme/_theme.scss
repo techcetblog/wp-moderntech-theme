@@ -1,14 +1,17 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
-$secondary: #f3f0fc;
-$secondary-500: #d0bda5;
+$secondary: #f8eeef;
+// $secondary-500: #d0bda5;
+$secondary-500: #d4979d;
 
 $xl: 1500px;
 $lg: 1200px;
 $md: 992px;
+$sm: 768px;
 
 body {
 	color: #1a1818;
+	background: #f7f7f7;
 	font-family: "Fira Sans", sans-serif;
 }
 
@@ -177,6 +180,7 @@ h4 {
 }
 
 #wrapper-navbar {
+	background: #ffffff;
 	#main-nav {
 		height: 80px;
 		.navbar-brand {
@@ -226,10 +230,10 @@ h4 {
 .home-banner {
 	padding: 72px 0;
 	height: 637px;
-	background: #c2c1c2;
+	background: #eccfd3;
 	background: url(../img/background.jpg);
 	background-size: cover;
-	background-attachment: fixed;
+	// background-attachment: fixed;
 
 	.banner-title {
 		font-size: 48px;
@@ -242,13 +246,192 @@ h4 {
 
 	p {
 		// font-family: Roboto, sans-serif;
-		width: 503px;
-		font-size: 23px;
+		width: 800px;
+		font-size: 18px;
 		line-height: 37px;
 		@media (max-width: $md) {
-			width: auto;
+			width: 503px;
 			font-size: 16px;
 		}
+		@media (max-width: $sm) {
+			width: initial;
+			font-size: 16px;
+		}
+	}
+}
+
+.home-cta {
+	margin-bottom: -200px;
+	@media (max-width: $lg) {
+		margin-bottom: -130px;
+	}
+	position: relative;
+	z-index: 500;
+	transition: 0.25s all ease;
+	.action {
+		background: $secondary;
+		display: block;
+		text-decoration: none;
+		margin-bottom: 30px;
+		.title {
+			padding: 10px 15px;
+			text-transform: uppercase;
+			font-weight: 500;
+			color: #000000;
+			white-space: nowrap;
+			overflow: hidden;
+			@media (max-width: $lg) {
+				font-size: 14px;
+			}
+		}
+		.img-holder {
+			height: 232px;
+			background: #ccc;
+			position: relative;
+			overflow: hidden;
+			.img {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				transition: 0.25s all ease;
+				transform: scale(1.15);
+			}
+		}
+		&:hover {
+			background: $secondary-500;
+			.img-holder {
+				.img {
+					transform: scale(1);
+				}
+			}
+		}
+	}
+
+	.info {
+		background: #ffffff;
+		padding: 10px 15px;
+		margin-bottom: 15px;
+		font-weight: 200;
+		@media (max-width: $xl) {
+			strong {
+				display: block;
+			}
+		}
+		@media (max-width: $lg) {
+			font-size: 16px;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+	}
+	@media (max-width: $xl) {
+		margin-top: 90px;
+	}
+	@media (max-width: $lg) {
+		margin-top: 80px;
+	}
+	@media (max-width: $md) {
+		margin-top: 70px;
+	}
+	@media (max-width: $sm) {
+		margin-top: 30px;
+	}
+}
+
+.btn-primary {
+	background: #000;
+	color: #fff;
+	border-radius: 0px;
+	outline: none;
+	border: none;
+	padding: 0.75em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	text-transform: uppercase;
+}
+
+.home-about {
+	// height: 800px;
+	background: $secondary;
+	padding-top: 300px;
+	padding-bottom: 115px;
+	position: relative;
+	@media (max-width: $lg) {
+		padding-bottom: 90px;
+	}
+	@media (max-width: $md) {
+		padding-bottom: 60px;
+	}
+	@media (max-width: $sm) {
+		padding-bottom: 30px;
+	}
+	h2 {
+		font-family: "Crimson Text", serif;
+		font-size: 60px;
+		font-style: italic;
+		@media (max-width: $xl) {
+			font-size: 48px;
+		}
+		@media (max-width: $lg) {
+			font-size: 36px;
+		}
+	}
+	p {
+		font-size: 24px;
+		font-weight: 200;
+
+		@media (max-width: $xl) {
+			font-size: 18px;
+		}
+	}
+	.btn {
+		font-size: 16px;
+		i {
+			margin-left: 1.5em;
+		}
+	}
+	.large-image {
+		position: absolute;
+		top: 300px;
+		right: 0;
+		height: 1130px;
+		width: 37.5vh;
+		background-color: #333;
+		background-image: url(../img/right-massive-image.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		@media (max-width: $xl) {
+			width: 35vw;
+		}
+		@media (max-width: $lg) {
+			top: 190px;
+			width: 30vw;
+		}
+		@media (max-width: $md) {
+			width: 42.5vh;
+		}
+		@media (max-width: $sm) {
+			position: relative;
+			top: initial;
+			right: initial;
+			width: 100%;
+			height: 530px;
+			margin-top: 30px;
+			margin-bottom: -280px;
+		}
+	}
+}
+
+.home-join-our-community {
+	height: 400px;
+	background: lightblue;
+	h2 {
+		font-size: 60px;
 	}
 }
 
@@ -292,6 +475,97 @@ h4 {
 			margin-bottom: 30px;
 			a {
 				color: #5b5b5b;
+			}
+		}
+	}
+}
+
+#wrapper-footer {
+	background: #672a30;
+	.site-footer {
+		padding: 55px 0;
+		color: #fff;
+		a {
+			color: #acacac;
+		}
+		.footer-social-wrap {
+			.social-menu {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				li {
+					display: inline-block;
+					a {
+						display: block;
+						padding: 0.5em 0.75em;
+						width: 40px;
+						height: 40px;
+						line-height: 26px;
+						background: #e2e2e2;
+						color: #333333;
+						text-align: center;
+						border-radius: 3px;
+						&:hover {
+							background: #333333;
+							color: #e2e2e2;
+							transition: 0.5s all ease-in-out;
+						}
+					}
+				}
+			}
+		}
+
+		.category-menu {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			li {
+				display: inline-block;
+				a {
+					margin-right: 5px;
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+
+		.subscribe-form-wrap {
+			.input-wrap {
+				width: 100%;
+				background: #fff;
+				display: flex;
+				align-items: center;
+				input {
+					width: 86%;
+					padding: 0.25em 0;
+					padding-left: 0.75em;
+					margin-right: 5px;
+					border: none;
+					outline: none;
+					@media (max-width: $md) {
+						width: 95%;
+					}
+				}
+				label {
+					color: #333333;
+					justify-content: center;
+					align-items: center;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+#single-wrapper {
+	background: #ffffff;
+	.content-area {
+		.site-main {
+			.post {
+			}
+			.post-single {
+				margin-bottom: 0;
 			}
 		}
 	}

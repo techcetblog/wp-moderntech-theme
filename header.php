@@ -5,13 +5,13 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package UnderStrap
+ * @package ModernTech
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'moderntech_container_type' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -21,10 +21,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
-	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,400;0,700;1,400;1,500&family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,400;0,700;1,400;1,500&family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
+<body <?php body_class(); ?> <?php moderntech_body_attributes(); ?>>
 	<?php do_action( 'wp_body_open' ); ?>
 	<div class="site" id="page">
 
@@ -89,7 +89,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<nav id="main-nav" class="navbar navbar-expand-lg navbar-light" aria-labelledby="main-nav-label">
 
 				<h2 id="main-nav-label" class="sr-only">
-					<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
+					<?php esc_html_e( 'Main Navigation', 'moderntech' ); ?>
 				</h2>
 
 			<?php if ( 'container' === $container ) : ?>
@@ -122,7 +122,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<!-- end of site description -->
 					<?php endif; ?>
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'moderntech' ); ?>">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
