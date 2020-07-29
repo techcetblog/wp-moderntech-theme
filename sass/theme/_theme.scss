@@ -681,29 +681,30 @@ h4 {
 		margin-bottom: 67px;
 		border-bottom: 2px solid $secondary-500;
 	}
-	.post {
-		margin-bottom: 51px;
-		.entry-title {
-			font-size: 30px;
-			line-height: 37px;
-			font-weight: bold;
-			margin-bottom: 30px;
-			a {
-				color: darken($secondary-500, 30%);
-				text-decoration: none;
-				&:hover {
-					color: $secondary-500;
-				}
+}
+
+.post {
+	margin-bottom: 51px;
+	.entry-title {
+		font-size: 30px;
+		line-height: 37px;
+		font-weight: bold;
+		margin-bottom: 30px;
+		a {
+			color: darken($secondary-500, 30%);
+			text-decoration: none;
+			&:hover {
+				color: $secondary-500;
 			}
 		}
-		.entry-meta {
-			font-size: 15px;
-			font-weight: bold;
-			line-height: 20px;
-			margin-bottom: 30px;
-			a {
-				color: #5b5b5b;
-			}
+	}
+	.entry-meta {
+		font-size: 15px;
+		font-weight: bold;
+		line-height: 20px;
+		margin-bottom: 30px;
+		a {
+			color: #5b5b5b;
 		}
 	}
 }
