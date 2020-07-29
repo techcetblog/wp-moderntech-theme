@@ -1,18 +1,6 @@
-[![Build Status](https://api.travis-ci.org/moderntech/moderntech.svg?branch=master)](https://travis-ci.org/moderntech/moderntech)
-[![Wordpress Theme Version](https://img.shields.io/wordpress/theme/v/moderntech.svg)](https://wordpress.org/themes/moderntech)
-[![Wordpress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/moderntech.svg)](https://wordpress.org/themes/moderntech/)
-[![Github Last Commit](https://img.shields.io/github/last-commit/moderntech/moderntech)](https://github.com/moderntech/moderntech/commits/master)
-[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0)
+# ModernTech by [Techcetblog](https://techcetblog.com)
 
-#### See: [Official Demo](https://moderntech.com/moderntech) | Read: [Official Docs Page](https://moderntech.github.io/)
-
-# ModernTech WordPress Theme Framework
-
-Website: [https://moderntech.com](https://moderntech.com)
-
-Child Theme Project: [https://github.com/moderntech/moderntech-child](https://github.com/moderntech/moderntech-child)
-
-OverStrap Child Themes: [https://moderntech.com/overstrap/](https://moderntech.com/overstrap/)
+Website: [https://techcetblog.com](https://techcetblog.com)
 
 ## About
 
@@ -24,10 +12,6 @@ ModernTech WordPress Theme, Copyright 2013-2018 Holger Koenemann
 ModernTech is distributed under the terms of the GNU GPL version 2
 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-
-## Changelog
-
-See [changelog](CHANGELOG.md)
 
 ## Basic Features
 
@@ -73,7 +57,7 @@ There are several ways to install ModernTech. We'll look at three of them: (1) c
 
 ### Classic install
 
-- Download the moderntech folder from GitHub or from [https://moderntech.com](https://moderntech.com)
+- Download the moderntech folder from GitHub or from [https://techcetblog.com](https://techcetblog.com)
 - IMPORTANT: If you download it from GitHub make sure you rename the "moderntech-master.zip" file just to "moderntech.zip" or you might have problems using child themes!
 - Upload it into your WordPress installation theme subfolder: `/wp-content/themes/`
 - Login to your WordPress backend

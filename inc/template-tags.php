@@ -158,3 +158,16 @@ if ( ! function_exists( 'moderntech_body_attributes' ) ) {
 		echo trim( $attributes ); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 }
+
+function get_author_role_name()
+{
+    global $authordata;
+
+    $author_roles = $authordata->roles;
+    $role = array_shift($author_roles);
+    $wp_roles = wp_roles();
+    // take role display name by role ID
+    $role_name = $wp_roles->role_names[$role];
+
+    return $role_name;
+}

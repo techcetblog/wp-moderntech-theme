@@ -27,11 +27,11 @@ $container = get_theme_mod( 'moderntech_container_type' );
 					<p class="theme-by">Theme: ModernTech by <a href="https://techcetblog.com/">techcetblog.com</a></p>
 					<div class="footer-social-wrap">
 						<ul class="social-menu">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="http://facebook.com/freshtechbloggers" target="_blank"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-free-code-camp"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="https://www.instagram.com/surajit4490/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/surajit-basak-5a75587a/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="https://www.youtube.com/channel/UCmSndEuckFjUhdZmzqO1SBg" target="_blank"><i class="fa fa-youtube"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -43,7 +43,8 @@ $container = get_theme_mod( 'moderntech_container_type' );
 							$categories = get_categories(
 								array(
 									'orderby' => 'name',
-									'order' => 'ASC'
+									'order' => 'ASC',
+									'posts_per_page' => 10,
 								)
 							);
 							foreach ($categories as $category): ?>
@@ -56,7 +57,10 @@ $container = get_theme_mod( 'moderntech_container_type' );
 				</div>
 				<div class="col-12 col-lg-3">
 					<h2 class="subscribe-title">Subscribe</h2>
-					<div class="subscribe-form-wrap">
+					<div class="email-subscription">
+						<?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
+					</div>
+					<!-- <div class="subscribe-form-wrap">
 						<form action="/subscribe">
 							<div class="input-wrap">
 								<input type="email" name="email" id="email">
@@ -65,7 +69,7 @@ $container = get_theme_mod( 'moderntech_container_type' );
 								</label>
 							</div>
 						</form>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

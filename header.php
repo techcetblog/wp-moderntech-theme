@@ -45,8 +45,10 @@ $container = get_theme_mod( 'moderntech_container_type' );
 						<a href="mailto:surajitbasak109@gmail.com">surajitbasak109@gmail.com</a>
 					</div>
 					<div class="contact-item search">
-						<i class="fa fa-search"></i>
-						<input type="text" placeholder="Search..." />
+						<form action="/" role="search" method="GET">
+							<i class="fa fa-search"></i>
+							<input type="text" name="s" aria-label="search text" placeholder="Search..." />
+						</form>
 					</div>
 				</div>
 				<div class="login-register">
@@ -56,22 +58,22 @@ $container = get_theme_mod( 'moderntech_container_type' );
 				<div class="top-social-icons">
 					<ul class="social-menu">
 						<li>
-							<a href="#" title="Facebook">
+							<a href="http://facebook.com/freshtechbloggers" target="_blank" title="Facebook">
 								<i class="fa fa-facebook"></i>
 							</a>
 						</li>
 						<li>
-							<a href="#" title="Linkedin">
+							<a href="https://www.linkedin.com/in/surajit-basak-5a75587a/" target="_blank" title="Linkedin">
 								<i class="fa fa-linkedin"></i>
 							</a>
 						</li>
 						<li>
-							<a href="#" title="Youtube">
+							<a href="https://www.youtube.com/channel/UCmSndEuckFjUhdZmzqO1SBg" target="_blank" title="Youtube">
 								<i class="fa fa-youtube"></i>
 							</a>
 						</li>
 						<li>
-							<a href="#" title="Instagram">
+							<a href="https://www.instagram.com/surajit4490/" target="_blank" title="Instagram">
 								<i class="fa fa-instagram"></i>
 							</a>
 						</li>

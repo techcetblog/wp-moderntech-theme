@@ -21,7 +21,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div class="comments-area" id="comments">
+<section class="comments-area entry-comments" id="comments">
 
 	<?php // You can start editing here -- including this comment! ?>
 
@@ -32,26 +32,28 @@ if ( post_password_required() ) {
 			<?php
 			$comments_number = get_comments_number();
 			if ( 1 === (int) $comments_number ) {
-				printf(
-					/* translators: %s: post title */
-					esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'moderntech' ),
-					'<span>' . get_the_title() . '</span>'
-				);
+				echo "One Response";
+				// printf(
+				// 	/* translators: %s: post title */
+				// 	esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'moderntech' ),
+				// 	'<span>' . get_the_title() . '</span>'
+				// );
 			} else {
-				printf(
-					esc_html(
-						/* translators: 1: number of comments, 2: post title */
-						_nx(
-							'%1$s thought on &ldquo;%2$s&rdquo;',
-							'%1$s thoughts on &ldquo;%2$s&rdquo;',
-							$comments_number,
-							'comments title',
-							'moderntech'
-						)
-					),
-					number_format_i18n( $comments_number ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					'<span>' . get_the_title() . '</span>'
-				);
+				echo $comments_number . " Responses";
+				// printf(
+				// 	esc_html(
+				// 		/* translators: 1: number of comments, 2: post title */
+				// 		_nx(
+				// 			'%1$s thought on &ldquo;%2$s&rdquo;',
+				// 			'%1$s thoughts on &ldquo;%2$s&rdquo;',
+				// 			$comments_number,
+				// 			'comments title',
+				// 			'moderntech'
+				// 		)
+				// 	),
+				// 	number_format_i18n( $comments_number ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				// 	'<span>' . get_the_title() . '</span>'
+				// );
 			}
 			?>
 
@@ -118,4 +120,4 @@ if ( post_password_required() ) {
 
 	<?php comment_form(); // Render comments form. ?>
 
-</div><!-- #comments -->
+</section><!-- #comments -->

@@ -30,26 +30,26 @@ if (is_front_page()) {
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-lg-4 col-md-4">
-				<a href="#" class="action">
-					<div class="title">fine art prints</div>
+				<a href="/category/linux" class="action">
+					<div class="title">Linux articles</div>
 					<div class="img-holder">
-						<div class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/cta-1.jpg);"></div>
+						<div class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/cta-1.webp);"></div>
+					</div>
+				</a>
+			</div>
+			<div class="col-12 col-lg-4 col-md-4">
+				<a href="/category/web-development" class="action">
+					<div class="title">Web Development</div>
+					<div class="img-holder">
+						<div class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/cta-2.webp);"></div>
 					</div>
 				</a>
 			</div>
 			<div class="col-12 col-lg-4 col-md-4">
 				<a href="#" class="action">
-					<div class="title">Every day photo prints</div>
+					<div class="title">How to</div>
 					<div class="img-holder">
-						<div class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/cta-2.jpg);"></div>
-					</div>
-				</a>
-			</div>
-			<div class="col-12 col-lg-4 col-md-4">
-				<a href="#" class="action">
-					<div class="title">Beyond photography</div>
-					<div class="img-holder">
-						<div class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/cta-3.jpg);"></div>
+						<div class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/cta-3.webp);"></div>
 					</div>
 				</a>
 			</div>
@@ -57,12 +57,12 @@ if (is_front_page()) {
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="info">
-					<strong>Want Samples Before Orderting?</strong> Just Pay Shipping
+					<strong>Dow you want to build Web Application?</strong> We have professional web application developers who can give you exactly what you want.
 				</div>
 			</div>
 			<div class="col-sm-6">
 				<div class="info">
-					<strong>Professional Photographer?</strong> Send Your Adobe RGB Images Direct
+					<strong>Need mobile applications?</strong> We have our mobile application developers who can build quality products for you.
 				</div>
 			</div>
 		</div>
@@ -73,11 +73,11 @@ if (is_front_page()) {
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-6">
-				<h2>Your story matters, we're here to make sure you celebrate it.</h2>
+				<h2>Techcet Blog is a medium to let you know about updated technical articles</h2>
 				<p>
-					We're more than a photo printing store. We're a community of creatives. We're passionate about what we do. About papers, priting, sharing your memories as well as our own, about travel, adventure, life, love and the special little moments that join together to tell your story.
+					Take a look at all the pages of this website, hopefully you will find various technical articles that will help you to know how to develop a website and find out what other technologies are used to develop a dynamic website.
 				</p>
-				<div class="btn btn-primary">About Techcet Blog <i class="fa fa-chevron-right"></i></div>
+				<a href="/about" class="btn btn-primary">About Techcet Blog <i class="fa fa-chevron-right"></i></a>
 			</div>
 			<div class="large-image"></div>
 		</div>
@@ -86,12 +86,38 @@ if (is_front_page()) {
 
 <section class="home-join-our-community">
 	<div class="container">
-		<h2>Join our community</h2>
-		<p>We're more than a photo printing store. We're a community of creatives. We're passionate about what we do.</p>
-		<?php echo do_shortcode('[contact-form-7 id="43" title="Newsletter Signup Homepage"]'); ?>
+		<div class="row">
+			<div class="col-lg-8 col-md-7">
+				<h2>Join our community</h2>
+				<p>Would you like to participate in the newsletter on our website? Then you can join our community by filling out the form below.</p>
+				<?php echo do_shortcode('[contact-form-7 id="43" title="Newsletter Signup Homepage"]'); ?>
+			</div>
+		</div>
 	</div>
 </section>
 
+<section class="home-collections">
+	<div class="container">
+		<h2>Our collections</h2>
+		<div class="row categories">
+			<?php
+			$categories = get_categories(
+				array(
+					'orderby' => 'name',
+					'order'   => 'ASC',
+				)
+			);
+			foreach ($categories as $category) :
+			?>
+				<div class="col-sm-3">
+					<a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo esc_html($category->name); ?></a>
+				</div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+
+<!--
 <section class="calolike">
 	<div class="container">
 		<div class="row">
@@ -116,6 +142,7 @@ if (is_front_page()) {
 		</div>
 	</div>
 </section>
+-->
 
 <section class="recent-posts">
 	<div class="container">
