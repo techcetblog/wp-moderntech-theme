@@ -32,8 +32,17 @@ $container = get_theme_mod( 'moderntech_container_type' );
 		<div id="top-bar">
 			<div class="container">
 				<div class="login-register-mobile">
-					<i class="fa fa-user-circle"></i>
-					<span>Login</span>
+					<?php if(!is_user_logged_in()): ?>
+					<a href="<?php echo wp_login_url(); ?>">
+						<i class="fa fa-user-circle"></i>
+						<span>Login</span>
+					</a>
+					<?php else: ?>
+					<a href="<?php echo wp_logout_url(); ?>">
+						<span>Logout</span>
+						<i class="fa fa-power-off"></i>
+					</a>
+					<?php endif; ?>
 				</div>
 				<div class="contact-info">
 					<div class="contact-item phone">
@@ -52,8 +61,17 @@ $container = get_theme_mod( 'moderntech_container_type' );
 					</div>
 				</div>
 				<div class="login-register">
-					<span>Login / Register</span>
-					<i class="fa fa-user-circle"></i>
+					<?php if(!is_user_logged_in()): ?>
+					<a href="<?php echo wp_login_url(); ?>">
+						<span>Login / Register</span>
+						<i class="fa fa-user-circle"></i>
+					</a>
+					<?php else: ?>
+					<a href="<?php echo wp_logout_url(); ?>">
+						<span>Logout</span>
+						<i class="fa fa-power-off"></i>
+					</a>
+					<?php endif; ?>
 				</div>
 				<div class="top-social-icons">
 					<ul class="social-menu">
@@ -79,10 +97,10 @@ $container = get_theme_mod( 'moderntech_container_type' );
 						</li>
 					</ul>
 				</div>
-				<div class="mobile-menu">
+				<!-- <div class="mobile-menu">
 					Menu
 					<i class="fa fa-bars"></i>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<!-- ******************* The Navbar Area ******************* -->

@@ -18,6 +18,14 @@ if ( is_front_page() ) {
 }
 ?>
 
+<?php
+
+if ( function_exists('yoast_breadcrumb') ) {
+  yoast_breadcrumb( '<div id="breadcrumbs"><div class="container">','</div></div>' );
+}
+
+?>
+
 <div class="wrapper" id="full-width-page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">

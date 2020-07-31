@@ -92,7 +92,7 @@ $get_author_gravatar = get_avatar_url( $get_author_id, array( 'size' => 450 ) );
 					$related->the_post();
 					/* Now render three posts */
 					?>
-					<article class="col-12 col-lg-4 col-md-4">
+					<article class="col-12 col-lg-4">
 						<div class="image">
 							<?php the_post_thumbnail( 'thumbnail' ); ?>
 						</div> <!-- .image -->

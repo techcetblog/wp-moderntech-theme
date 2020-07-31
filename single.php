@@ -12,6 +12,14 @@ get_header();
 $container = get_theme_mod( 'moderntech_container_type' );
 ?>
 
+<?php
+
+if ( function_exists('yoast_breadcrumb') ) {
+  yoast_breadcrumb( '<div id="breadcrumbs"><div class="container">','</div></div>' );
+}
+
+?>
+
 <div class="wrapper" id="single-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">

@@ -15,13 +15,21 @@ get_header();
 
 ?>
 
+<?php
+
+if ( function_exists('yoast_breadcrumb') ) {
+  yoast_breadcrumb( '<div id="breadcrumbs"><div class="container">','</div></div>' );
+}
+
+?>
+
 <main id="site-main" class="blog-page-main">
 	<div id="content" class="blog-page-content">
-		<div class="mt-banner mt-banner-info" role="banner">
+		<!-- <div class="mt-banner mt-banner-info" role="banner">
 			<div class="container">
 				Welcome to <a href="/">Techcet Blog</a>
 			</div>
-		</div>
+		</div> -->
 		<div class="blog-landing-page">
 			<div class="layout container pb-0">
 				<header class="page-header">
